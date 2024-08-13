@@ -18,12 +18,9 @@ get_vocabulary <- function(abstracts, term_count = 2) {
   } else if(is.character(abstracts)){
     text <- abstracts
   } else{
-    stop("Provide an abstracts object or avector of strings")
+    stop("Provide an abstracts object or a character vector")
   }
   text  <- utf8::utf8_encode(text)
-  text  <- utf8::utf8_format(text)
-  text  <- utf8::utf8_normalize(text)
-  #loadpkg("stringi")
   prep_fun <- tolower
 
 
@@ -39,13 +36,12 @@ get_vocabulary <- function(abstracts, term_count = 2) {
   # Filter al words starting and finishing with numbers
 
   v <- v |>
-    dplyr::mutate(term = gsub("__", "", .data$term)) |>
+    dplyr::filter(!grepl(pattern = "____", .data$term )) |>
     dplyr::filter(!grepl(pattern = "^[0-9]", .data$term )) |>
     dplyr::filter(!grepl(pattern = "$[0-9]", .data$term )) |>
     # filter all terms with less than three characters
     dplyr::filter(nchar(.data$term) > 3)
 
   pruned_vocab = text2vec::prune_vocabulary(v, term_count_min = term_count)
-  names(pruned_vocab) <- "vocabulary"
   return( pruned_vocab )
 }

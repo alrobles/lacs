@@ -2,7 +2,9 @@
 
 S3method(print,abstracts)
 export(get_abstracts)
+export(get_dtm)
 export(get_vocabulary)
+export(get_y)
 export(new_abstracts)
 export(validate_abstracts)
 importFrom(methods,is)
