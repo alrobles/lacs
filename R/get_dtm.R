@@ -13,16 +13,16 @@
 #'
 #' @examples
 #' abstracts <- get_abstracts(lacsSample)
-#' vocabulary <- get_vocabulary(abstracts, term_count = 5)
-#' get_dtm(abstracts, vocabulary, tf_idf = TRUE)
+#' vocabulary <- get_vocabulary(abstracts, term_count = 10)
+#' get_dtm(abstracts, vocabulary, tf_idf = FALSE)
 get_dtm <- function(abstracts, vocabulary, tf_idf = TRUE){
 
-  if(is(abstracts) == "abstracts"){
+  if(any(is(abstracts) %in% "abstracts")){
     text <- abstracts$abstract
   } else if(is.character(abstracts)){
     text <- abstracts
   } else{
-    stop("Provide an abstracts object or avector of strings")
+    stop("Provide an abstracts object or a character vector")
   }
   text  <- utf8::utf8_encode(text)
   prep_fun <- tolower

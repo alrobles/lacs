@@ -25,6 +25,6 @@ Get a document term matrix from abstracts
 }
 \examples{
 abstracts <- get_abstracts(lacsSample)
-vocabulary <- get_vocabulary(abstracts, term_count = 5)
-get_dtm(abstracts, vocabulary, tf_idf = TRUE)
+vocabulary <- get_vocabulary(abstracts, term_count = 10)
+get_dtm(abstracts, vocabulary, tf_idf = FALSE)
 }
