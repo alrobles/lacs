@@ -13,7 +13,8 @@ lacs(
   alpha = 1,
   sample_use_time = 30,
   learning_rate = 1,
-  qq = 0.1
+  qq = 0.1,
+  tf_idf = TRUE
 )
 }
 \arguments{
@@ -35,6 +36,8 @@ an \code{abstracts} object}
 \item{learning_rate}{Plus parameter. Learning rate. Default is 1.}
 
 \item{qq}{Plus parameter. quantile threshold}
+
+\item{tf_idf}{Logical. Default is true, use a tf_idf in the document - term matrix S}
 }
 \value{
 An object of class lacs

@@ -10,7 +10,7 @@
 #' @param sample_use_time Plus parameter. Number of use time.
 #' @param learning_rate Plus parameter. Learning rate. Default is 1.
 #' @param qq Plus parameter. quantile threshold
-
+#' @param tf_idf Logical. Default is true, use a tf_idf in the document - term matrix S
 #' @return An object of class lacs
 #' @export
 #'
@@ -24,7 +24,7 @@ lacs <- function(abstracts,
                  alpha = 1,
                  sample_use_time = 30,
                  learning_rate = 1,
-                 qq = 0.1){
+                 qq = 0.1, tf_idf = TRUE){
   this.call <- match.call()
 
   abstracts <- get_abstracts(abstracts)
@@ -38,7 +38,7 @@ lacs <- function(abstracts,
                    alpha = alpha,
                    sample_use_time = sample_use_time,
                    learning_rate = learning_rate,
-                   qq = qq)
+                   qq = qq, tf_idf = tf_idf)
 
   lacs <- new_lacs(plus = plus,
            vocabulary = vocabulary,
