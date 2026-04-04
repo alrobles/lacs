@@ -39,7 +39,7 @@ The documentation for the bundled datasets names the original data sources:
 
 Enforces a strict 4-column schema on any incoming data frame:
 - Required columns: `doi`, `title`, `abstract`, `class`
-- Allowed class values: `"possitive"` or `"unknown"` (note the typo in the package)
+- Allowed class values: `"possitive"` or `"unknown"` (note: `"possitive"` is a typo in the package source code, preserved here for accuracy)
 - Filters out rows with invalid class labels
 - **Reusability:** This pattern (column-presence check + value allowlist + filter) is directly portable to any ingestion pipeline receiving paper metadata from an API.
 
@@ -107,7 +107,7 @@ Tokenizes, vectorizes against a vocabulary, and optionally applies TF-IDF weight
 **File:** `R/get_y.R`, lines 12–19
 **Signature:** `get_y(abstracts)`
 
-Extracts the `class` column and converts `"possitive"` → `1`, everything else → `0`. Straightforward but reusable for any binary PU-learning setup.
+Extracts the `class` column and converts `"possitive"` → `1`, everything else → `0` (note: `"possitive"` is the actual spelling used in the package source). Straightforward but reusable for any binary PU-learning setup.
 
 ---
 
