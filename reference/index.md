@@ -1,0 +1,74 @@
+# Package index
+
+## All functions
+
+- [`abstracts2text()`](https://alrobles.github.io/lacs/reference/abstracts2text.md)
+  : Validate a data frame with abstracts to construct vectpr of strings
+- [`example_abstract`](https://alrobles.github.io/lacs/reference/example_abstract.md)
+  : Vector with 100 examples of abstracts from papers. This abstracts
+  are used as an example to create a object of class abstracts.
+- [`example_auc`](https://alrobles.github.io/lacs/reference/example_auc.md)
+  : Example of value auc for test data using a plus model with a set of
+  abstracts.
+- [`example_class`](https://alrobles.github.io/lacs/reference/example_class.md)
+  : Vector with 100 examples of class of abstracts from papers. Is used
+  as an example to build an abstracts class. Could be positive
+  (belonging to the corpus of mammal - parasite papers) or unknown.
+- [`example_doi`](https://alrobles.github.io/lacs/reference/example_doi.md)
+  : Vector with 100 examples of DOI from papers. Is used as an example
+  to build an abstracts class.
+- [`example_plus`](https://alrobles.github.io/lacs/reference/example_plus.md)
+  : Example of plus model fitted with abstracts.
+- [`example_test`](https://alrobles.github.io/lacs/reference/example_test.md)
+  : Example of test data. Is a sample of the lacs dataset.
+- [`example_title`](https://alrobles.github.io/lacs/reference/example_title.md)
+  : Vector with 100 examples of titles from papers. Is used as an
+  example to build an abstracts class.
+- [`example_train`](https://alrobles.github.io/lacs/reference/example_train.md)
+  : Example of train data. Is a sample of the lacs dataset.
+- [`example_vocabulary`](https://alrobles.github.io/lacs/reference/example_vocabulary.md)
+  : Example of vocabulary. Is a vocabulary object used to test the
+  new_plus function.
+- [`fit_plus()`](https://alrobles.github.io/lacs/reference/fit_plus.md)
+  : Fit a plus model to an abstracts object
+- [`get_abstracts()`](https://alrobles.github.io/lacs/reference/get_abstracts.md)
+  : abstracts model helper function
+- [`get_dtm()`](https://alrobles.github.io/lacs/reference/get_dtm.md) :
+  Get a document term matrix from abstracts
+- [`get_vocabulary()`](https://alrobles.github.io/lacs/reference/get_vocabulary.md)
+  : Create vocabulary from abstracts
+- [`get_y()`](https://alrobles.github.io/lacs/reference/get_y.md) : Get
+  the independent variable for an abstracts object
+- [`hp3_abstracts`](https://alrobles.github.io/lacs/reference/hp3_abstracts.md)
+  : Dataset with 710 abstracts originally selected by the hp3 project.
+  These papers were used to obtain mammal-virus interactions, aligned
+  and harmonized taxonomically by Rory Gibb of the clover project. Rory
+  Gibb curated the hp3 original dataset and added doi and pmid. We
+  retrived the abstracts through entrez API in PubMed using pmid. Is
+  primarily used to test a lacs model as a benchmark in classification.
+  We use true possitive rate metric (precision) to classify this
+  dataset. We consider all these articles as positive class papers
+  because they contain information on parasite-host interactions. Our
+  lacs model is trained to find papers with this information. The
+  original dataset is stored in 10.5281/zenodo.596810 and the clover
+  curated dataset was retrived from 10.5281/zenodo.4435127
+- [`lacs()`](https://alrobles.github.io/lacs/reference/lacs.md) : Create
+  an object of class lacs
+- [`lacsSample`](https://alrobles.github.io/lacs/reference/lacsSample.md)
+  : Data frame with 600 abstracts. Each abstract belongs to one of both
+  classes, positive and unknown. Abstracts from parasite class are from
+  ZOVER and GMPD database. Abstracs from unknown class are random
+  abstracts retrived from crossref.
+- [`new_abstracts()`](https://alrobles.github.io/lacs/reference/new_abstracts.md)
+  : Constructor function for the class abstracts A constructor for the
+  abstracts class
+- [`new_lacs()`](https://alrobles.github.io/lacs/reference/new_lacs.md)
+  : Constructor function for the class lacs. A constructor for the lacs
+  class
+- [`predict()`](https://alrobles.github.io/lacs/reference/predict.md) :
+  Predicted classification with a lacs model
+- [`predictions()`](https://alrobles.github.io/lacs/reference/predictions.md)
+  : Title
+- [`validate_abstracts()`](https://alrobles.github.io/lacs/reference/validate_abstracts.md)
+  : Validate a data frame with abstracts to construct an object of class
+  abstracts via new_abstracts function
