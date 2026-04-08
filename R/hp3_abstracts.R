@@ -6,7 +6,7 @@
 #' doi and pmid. We retrived the abstracts through
 #' entrez API in PubMed using pmid.
 #' Is primarily used to test a lacs model as a benchmark
-#' in classification. We use true possitive rate metric
+#' in classification. We use true positive rate metric
 #' (precision) to classify this dataset. We consider all
 #' these articles as positive class papers because they
 #' contain information on parasite-host interactions.

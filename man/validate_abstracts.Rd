@@ -8,7 +8,8 @@ validate_abstracts(abstracts_df)
 }
 \arguments{
 \item{abstracts_df}{A data frame with abstracts.
-Should contain doi, title, abstracts and class columns in order to be valid.}
+Should contain doi, title, abstract and class columns in order to be valid.
+The class column must contain only \code{"positive"} or \code{"unknown"} values.}
 }
 \value{
 A validated \code{data.frame} with abstracts to construct an abstracts object

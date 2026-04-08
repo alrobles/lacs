@@ -8,7 +8,7 @@ get_y(abstracts)
 }
 \arguments{
 \item{abstracts}{An object of class abstracts is a data frame
-with a class column. Shoiuld have possitive and unknown classes}
+with a class column. Should have \code{"positive"} and \code{"unknown"} classes}
 }
 \value{
 A vector of binary output

@@ -7,8 +7,8 @@
 get_abstracts(x = NULL)
 }
 \arguments{
-\item{x}{A data frame with abstracts. Should contain doi, title, abstracts and a class column.
-The class should be possitive or unknown.}
+\item{x}{A data frame with abstracts. Should contain doi, title, abstract and a class column.
+The class should be \code{"positive"} or \code{"unknown"}.}
 }
 \value{
 and object of the class abstracts
