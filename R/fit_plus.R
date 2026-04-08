@@ -14,7 +14,7 @@
 #' cases and Sparse structures, PLUS).
 #' This is a cross-validated glmnet logistics regression optimized for positive and
 #' unlabeled learning. This classification is applied to a dtm matrix created
-#' with the vocabulary and the abstracts. The independent variables are the possitive
+#' with the vocabulary and the abstracts. The independent variables are the positive
 #' and unknown classes of the provided \code{abstract} object.
 #' @export
 #'
