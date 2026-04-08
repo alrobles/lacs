@@ -7,7 +7,7 @@ Tasks not yet started.
 
 ## Column 2: Ready for Implementation
 
-### Task 1 — Standardize label terminology
+### Task 1 — Standardize label terminology ✅ Done
 **Owner:** Agent 1  
 **Files:**
 - R/validate_abstracts.R
@@ -18,11 +18,11 @@ Tasks not yet started.
 - DESCRIPTION if wording needs updating
 
 **Checklist**
-- [ ] Choose one canonical positive-class spelling
-- [ ] Remove possitive / unknow inconsistencies
-- [ ] Update validation logic to use canonical labels
-- [ ] Update label extraction logic
-- [ ] Update examples and docs
+- [x] Choose one canonical positive-class spelling
+- [x] Remove possitive / unknow inconsistencies
+- [x] Update validation logic to use canonical labels
+- [x] Update label extraction logic
+- [x] Update examples and docs
 
 **Acceptance criteria**
 - All label-related code uses one consistent spelling
@@ -30,18 +30,19 @@ Tasks not yet started.
 
 ---
 
-### Task 2 — Rewrite validation logic
+### Task 2 — Rewrite validation logic ✅ Done
 **Owner:** Agent 1  
 **Files:**
 - R/validate_abstracts.R
 - R/get_abstracts.R
+- tests/testthat/test-validate-abstracts.R
 
 **Checklist**
-- [ ] Replace stopifnot() with explicit validation
-- [ ] Validate required columns
-- [ ] Validate allowed class values
-- [ ] Emit helpful error messages
-- [ ] Preserve expected output column order
+- [x] Replace stopifnot() with explicit validation
+- [x] Validate required columns
+- [x] Validate allowed class values
+- [x] Emit helpful error messages
+- [x] Preserve expected output column order
 
 **Acceptance criteria**
 - Invalid input fails clearly and predictably
