@@ -17,14 +17,14 @@
 #' class = example_class
 #' )
 new_abstracts <- function(doi = character(),
-                     title = character(),
-                     abstract = character(),
-                     class = character()){
-  abstracts <- tibble::tibble(doi = doi,
-         title = title,
-         abstract = abstract,
-         class = class)
-
-  class(abstracts) <- c("abstracts", class(abstracts))
-  return(abstracts)
+                          title = character(),
+                          abstract = character(),
+                          class = character()) {
+  abstracts <- tibble::tibble(
+    doi      = doi,
+    title    = title,
+    abstract = abstract,
+    class    = class
+  )
+  structure(abstracts, class = c("abstracts", base::class(abstracts)))
 }
