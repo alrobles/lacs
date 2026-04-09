@@ -71,6 +71,7 @@ Tasks not yet started.
 **Owner:** Agent 2  
 **Files:**
 - R/get_vocabulary.R
+- tests/testthat/test-get-vocabulary.R
 
 **Checklist**
 - [x] Review regex patterns

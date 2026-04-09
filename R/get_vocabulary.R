@@ -20,7 +20,6 @@ get_vocabulary <- function(abstracts, term_count_min = 2, doc_proportion_min = 0
 
   it = text2vec::itoken(text,
                         preprocessor = prep_fun,
-                        #tok_fun = word_tokenizer,
                         progressbar = FALSE)
   # English stopwords are appropriate for this scientific-literature use case.
   stop_words <- stopwords::stopwords()
