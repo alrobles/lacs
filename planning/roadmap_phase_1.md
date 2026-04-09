@@ -67,17 +67,18 @@ Tasks not yet started.
 
 ---
 
-### Task 4 — Review and fix vocabulary filtering
+### Task 4 — Review and fix vocabulary filtering ✅ Done
 **Owner:** Agent 2  
 **Files:**
 - R/get_vocabulary.R
+- tests/testthat/test-get-vocabulary.R
 
 **Checklist**
-- [ ] Review regex patterns
-- [ ] Fix token filtering bugs
-- [ ] Confirm stopword behavior
-- [ ] Confirm n-gram range
-- [ ] Validate on sample data
+- [x] Review regex patterns
+- [x] Fix token filtering bugs
+- [x] Confirm stopword behavior
+- [x] Confirm n-gram range
+- [x] Validate on sample data
 
 **Acceptance criteria**
 - Vocabulary output behaves as intended
