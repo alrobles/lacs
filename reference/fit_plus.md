@@ -281,7 +281,6 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
 #> Warning: no non-missing arguments to max; returning -Inf
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
@@ -296,14 +295,12 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
 #> Warning: no non-missing arguments to max; returning -Inf
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
@@ -319,6 +316,9 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
@@ -328,13 +328,9 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
-#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
@@ -345,6 +341,15 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
@@ -353,13 +358,121 @@ model <- fit_plus(abstracts = train, vocabulary = v)
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
 #> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Warning: Too few (< 10) observations per fold for type.measure='auc' in cv.lognet; changed to type.measure='deviance'. Alternatively, use smaller value for nfolds
+#> Warning: no non-missing arguments to max; returning -Inf
+#> Warning: no non-missing arguments to min; returning Inf
+#> Warning: one multinomial or binomial class has fewer than 8  observations; dangerous ground
+#> Error in lognet(x, is.sparse, y, weights, offset, alpha, nobs, nvars,     jd, vp, cl, ne, nx, nlam, flmin, ulam, thresh, isd, intr,     vnames, maxit, kopt, family, pb): one multinomial or binomial class has 1 or 0 observations; not allowed
 model
-#> 
-#> Call:  glmnet::cv.glmnet(x = train.X, y = y, family = "binomial") 
-#> 
-#> Measure: Binomial Deviance 
-#> 
-#>     Lambda Index Measure     SE Nonzero
-#> min 0.0934    21   1.251 0.2445      13
-#> 1se 0.2368     1   1.399 0.0120       0
+#> Error: object 'model' not found
 ```

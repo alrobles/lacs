@@ -81,8 +81,8 @@ lacs(lacsSample, tail(example_vocabulary, 500))
 #> Measure: Binomial Deviance 
 #> 
 #>       Lambda Index Measure      SE Nonzero
-#> min 0.007635    35  0.4413 0.05904      84
-#> 1se 0.028083    21  0.4967 0.03559      49
+#> min 0.007855    34  0.4023 0.05150      78
+#> 1se 0.016535    26  0.4452 0.04967      60
 #> 
 #> $vocabulary
 #> Number of docs: 600 

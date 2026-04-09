@@ -46,17 +46,17 @@ model <- lacs(lacsSample[1:200, ])
 lacsSample <- get_abstracts(lacsSample)
 predictions(model, abstracts = lacsSample)
 #> # A tibble: 600 × 4
-#>    truth Class1     Class2 predicted
-#>    <fct>  <dbl>      <dbl> <fct>    
-#>  1 0     0.132  0.868      FALSE    
-#>  2 0     0.0250 0.975      FALSE    
-#>  3 1     0.132  0.868      FALSE    
-#>  4 1     1.000  0.00000548 TRUE     
-#>  5 0     0.0702 0.930      FALSE    
-#>  6 0     0.101  0.899      FALSE    
-#>  7 1     0.420  0.580      FALSE    
-#>  8 0     0.132  0.868      FALSE    
-#>  9 0     0.904  0.0962     TRUE     
-#> 10 0     0.132  0.868      FALSE    
+#>    truth  Class1   Class2 predicted
+#>    <fct>   <dbl>    <dbl> <fct>    
+#>  1 0     0.0438  9.56e- 1 FALSE    
+#>  2 0     0.00367 9.96e- 1 FALSE    
+#>  3 1     0.0438  9.56e- 1 FALSE    
+#>  4 1     1.000   2.81e-11 TRUE     
+#>  5 0     0.0365  9.63e- 1 FALSE    
+#>  6 0     0.0405  9.59e- 1 FALSE    
+#>  7 1     0.897   1.03e- 1 TRUE     
+#>  8 0     0.0438  9.56e- 1 FALSE    
+#>  9 0     0.895   1.05e- 1 TRUE     
+#> 10 0     0.634   3.66e- 1 FALSE    
 #> # ℹ 590 more rows
 ```
