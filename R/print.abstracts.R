@@ -1,4 +1,4 @@
-#' Title
+#' Print an abstracts object
 #'
 #' @param x Object of the abstracts type to print.
 #' @param ... Passed on to [tbl_format_setup()].#'

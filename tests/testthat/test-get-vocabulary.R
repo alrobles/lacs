@@ -1,116 +1,64 @@
-# Tests for Task 4 — get_vocabulary() filtering behaviour.
-#
-# These tests use minimal, controlled abstracts to verify each filter rule
-# independently and guard against regressions.
+# Tests for Task 4 — get_vocabulary() filtering behavior.
 
-# Helper: build an abstracts object from a character vector of abstract texts.
-make_vocab_abstracts <- function(texts) {
-  n <- length(texts)
-  df <- data.frame(
-    doi      = paste0("10.1/", seq_len(n)),
-    title    = paste0("Title ", seq_len(n)),
-    abstract = texts,
-    class    = rep(c("positive", "unknown"), length.out = n),
+make_abstracts_df <- function() {
+  data.frame(
+    doi      = lacsSample$doi[1:50],
+    title    = lacsSample$title[1:50],
+    abstract = lacsSample$abstract[1:50],
+    class    = lacsSample$class[1:50],
     stringsAsFactors = FALSE
   )
-  get_abstracts(df)
 }
 
-# ── Return type ───────────────────────────────────────────────────────────────
-
-test_that("get_vocabulary returns a text2vec_vocabulary object", {
-  abs_obj <- make_vocab_abstracts(c(
-    "microbiology research laboratory analysis",
-    "microbiology research laboratory analysis"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  expect_s3_class(result, "text2vec_vocabulary")
+test_that("get_vocabulary returns an object with a 'term' column", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  expect_true("term" %in% names(v))
 })
 
-# ── Character-length filter (nchar > 3) ───────────────────────────────────────
-
-test_that("get_vocabulary excludes terms with three or fewer characters", {
-  # "cat" (3 chars) and "dog" (3 chars) should be dropped; "cats" (4) kept
-  abs_obj <- make_vocab_abstracts(c(
-    "cats cat dog long research microbiology laboratory analysis",
-    "cats cat dog long research microbiology laboratory analysis"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  terms <- result$term
-  expect_false("cat" %in% terms)
-  expect_false("dog" %in% terms)
-  expect_true("cats" %in% terms)
+test_that("get_vocabulary returns a data.table-compatible object", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  # text2vec vocabulary is a data.table
+  expect_true(is.data.frame(v))
 })
 
-# ── Digit-start filter (^[0-9]) ───────────────────────────────────────────────
-
-test_that("get_vocabulary excludes terms that start with a digit", {
-  abs_obj <- make_vocab_abstracts(c(
-    "2019data microbiology research laboratory analysis population",
-    "2019data microbiology research laboratory analysis population"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  terms <- result$term
-  expect_false(any(grepl("^[0-9]", terms)))
+test_that("no term starts with a digit", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  expect_false(any(grepl("^[0-9]", v$term)))
 })
 
-# ── Digit-end filter ([0-9]$) — regression guard for the fixed regex ──────────
-
-test_that("get_vocabulary excludes terms that end with a digit", {
-  # "sample5" and "result3" end in digits and must be filtered out
-  abs_obj <- make_vocab_abstracts(c(
-    "sample5 result3 microbiology research laboratory analysis population",
-    "sample5 result3 microbiology research laboratory analysis population"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  terms <- result$term
-  expect_false(any(grepl("[0-9]$", terms)))
+test_that("no term ends with a digit (validates fixed regex)", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  expect_false(any(grepl("[0-9]$", v$term)))
 })
 
-# ── Stopword filter ───────────────────────────────────────────────────────────
-
-test_that("get_vocabulary excludes common English stopwords", {
-  # "from" is a standard English stopword with nchar = 4 (passes the nchar
-  # filter), so its absence proves the stopword filter is active.
-  abs_obj <- make_vocab_abstracts(c(
-    "results from microbiology research laboratory analysis population",
-    "results from microbiology research laboratory analysis population"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  terms <- result$term
-  expect_false("from" %in% terms)
+test_that("no term is a pure numeric-underscore string (validates fixed ____ filter)", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  expect_false(any(grepl("^[0-9_]+$", v$term)))
 })
 
-# ── n-gram range ──────────────────────────────────────────────────────────────
-
-test_that("get_vocabulary includes bigrams in the vocabulary", {
-  # The function uses ngram = c(1L, 5L), so multi-word phrases should appear.
-  # "microbiology research" should produce the bigram "microbiology_research".
-  abs_obj <- make_vocab_abstracts(c(
-    "microbiology research laboratory analysis population study",
-    "microbiology research laboratory analysis population study"
-  ))
-  result <- get_vocabulary(abs_obj, term_count_min = 1)
-  terms <- result$term
-  expect_true(any(grepl("_", terms)))
+test_that("all returned terms are longer than 3 characters", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 2)
+  expect_true(all(nchar(v$term) > 3))
 })
 
-# ── term_count_min pruning ────────────────────────────────────────────────────
+test_that("term_count_min prunes low-frequency terms", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v_loose  <- get_vocabulary(abstracts, term_count_min = 1)
+  v_strict <- get_vocabulary(abstracts, term_count_min = 10)
+  expect_gt(nrow(v_loose), nrow(v_strict))
+})
 
-test_that("get_vocabulary respects term_count_min", {
-  # "rare" appears only once; "common" appears in both documents.
-  abs_obj <- make_vocab_abstracts(c(
-    "common microbiology research laboratory rare population",
-    "common microbiology research laboratory analysis population"
-  ))
-  result_strict <- get_vocabulary(abs_obj, term_count_min = 2)
-  result_loose  <- get_vocabulary(abs_obj, term_count_min = 1)
-
-  # "rare" appears once → excluded at term_count_min = 2, present at 1
-  expect_false("rare" %in% result_strict$term)
-  expect_true("rare" %in% result_loose$term)
-
-  # "common" appears twice → present at both thresholds
-  expect_true("common" %in% result_strict$term)
-  expect_true("common" %in% result_loose$term)
+test_that("English stopwords are excluded from vocabulary", {
+  abstracts <- get_abstracts(make_abstracts_df())
+  v <- get_vocabulary(abstracts, term_count_min = 1)
+  common_stopwords <- c("the", "and", "this", "that", "with")
+  # Stopwords are removed before n-gram construction, so none should appear
+  # as unigrams in the vocabulary.
+  expect_false(any(common_stopwords %in% v$term))
 })

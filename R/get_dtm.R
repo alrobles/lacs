@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' abstracts <- get_abstracts(lacsSample)
-#' vocabulary <- get_vocabulary(abstracts, term_count = 10)
+#' vocabulary <- get_vocabulary(abstracts, term_count_min = 10)
 #' get_dtm(abstracts, vocabulary, tf_idf = FALSE)
 get_dtm <- function(abstracts, vocabulary, tf_idf = TRUE){
 
