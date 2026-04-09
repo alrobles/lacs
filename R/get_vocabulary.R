@@ -20,7 +20,6 @@ get_vocabulary <- function(abstracts, term_count_min = 2, doc_proportion_min = 0
 
   it = text2vec::itoken(text,
                         preprocessor = prep_fun,
-                        #tok_fun = word_tokenizer,
                         progressbar = FALSE)
   stop_words <- stopwords::stopwords()
 
@@ -32,7 +31,7 @@ get_vocabulary <- function(abstracts, term_count_min = 2, doc_proportion_min = 0
   v <- v |>
     dplyr::filter(!grepl(pattern = "____", .data$term )) |>
     dplyr::filter(!grepl(pattern = "^[0-9]", .data$term )) |>
-    dplyr::filter(!grepl(pattern = "$[0-9]", .data$term )) |>
+    dplyr::filter(!grepl(pattern = "[0-9]$", .data$term )) |>
     # filter all terms with less than three characters
     dplyr::filter(nchar(.data$term) > 3)
 
