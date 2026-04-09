@@ -61,7 +61,7 @@ unknown classes of the provided `abstract` object.
 
 ``` r
 abstracts <- get_abstracts(lacsSample)
-v <- get_vocabulary(abstracts, term_count = 2)
+v <- get_vocabulary(abstracts, term_count_min = 2)
 s <- sample(seq(nrow(abstracts)), 65, replace = FALSE)
 train <- abstracts[s, ]
 model <- fit_plus(abstracts = train, vocabulary = v)

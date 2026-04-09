@@ -34,7 +34,7 @@ matrix from vocabulary
 
 ``` r
 abstracts <- get_abstracts(lacsSample)
-vocabulary <- get_vocabulary(abstracts, term_count = 10)
+vocabulary <- get_vocabulary(abstracts, term_count_min = 10)
 get_dtm(abstracts, vocabulary, tf_idf = FALSE)
 #> 600 x 21 sparse Matrix of class "dgCMatrix"
 #>   [[ suppressing 21 column names ‘determine’, ‘infection’, ‘present’ ... ]]

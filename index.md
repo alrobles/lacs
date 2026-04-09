@@ -1,2 +1,4 @@
-More about what it does (maybe more than one line) Use four spaces when
-indenting paragraphs within the Description.
+Provides a workflow for classifying scientific literature abstracts
+using positive-unlabeled (PU) learning. Supports abstract ingestion,
+text preprocessing, vocabulary construction, document-term matrix
+creation, and model fitting via the PLUS algorithm.
