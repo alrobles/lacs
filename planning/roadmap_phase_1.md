@@ -67,17 +67,17 @@ Tasks not yet started.
 
 ---
 
-### Task 4 — Review and fix vocabulary filtering
+### Task 4 — Review and fix vocabulary filtering ✅ Done
 **Owner:** Agent 2  
 **Files:**
 - R/get_vocabulary.R
 
 **Checklist**
-- [ ] Review regex patterns
-- [ ] Fix token filtering bugs
-- [ ] Confirm stopword behavior
-- [ ] Confirm n-gram range
-- [ ] Validate on sample data
+- [x] Review regex patterns
+- [x] Fix token filtering bugs
+- [x] Confirm stopword behavior
+- [x] Confirm n-gram range
+- [x] Validate on sample data
 
 **Acceptance criteria**
 - Vocabulary output behaves as intended
@@ -85,17 +85,17 @@ Tasks not yet started.
 
 ---
 
-### Task 5 — Verify DTM generation
+### Task 5 — Verify DTM generation ✅ Done
 **Owner:** Agent 2  
 **Files:**
 - R/get_dtm.R
 - R/abstracts2text.R
 
 **Checklist**
-- [ ] Confirm accepted input types
-- [ ] Verify UTF-8 normalization behavior
-- [ ] Confirm TF-IDF toggle works
-- [ ] Ensure matrix dimensions match inputs
+- [x] Confirm accepted input types
+- [x] Verify UTF-8 normalization behavior
+- [x] Confirm TF-IDF toggle works
+- [x] Ensure matrix dimensions match inputs
 
 **Acceptance criteria**
 - get_dtm() works for both abstract objects and character vectors
@@ -103,24 +103,24 @@ Tasks not yet started.
 
 ---
 
-### Task 6 — Clean package metadata
+### Task 6 — Clean package metadata ✅ Done
 **Owner:** Agent 3  
 **Files:**
 - DESCRIPTION
 - NAMESPACE
 
 **Checklist**
-- [ ] Replace placeholder description text
-- [ ] Review imports
-- [ ] Verify exports
-- [ ] Confirm package metadata matches reality
+- [x] Replace placeholder description text
+- [x] Review imports
+- [x] Verify exports
+- [x] Confirm package metadata matches reality
 
 **Acceptance criteria**
 - Package metadata is accurate and complete enough for maintenance
 
 ---
 
-### Task 7 — Update documentation
+### Task 7 — Update documentation ✅ Done
 **Owner:** Agent 3  
 **Files:**
 - man/*.Rd
@@ -128,17 +128,17 @@ Tasks not yet started.
 - README.md if needed
 
 **Checklist**
-- [ ] Regenerate docs after code changes
-- [ ] Update examples to match canonical terminology
-- [ ] Align parameter descriptions with behavior
-- [ ] Confirm package site configuration is still valid
+- [x] Regenerate docs after code changes
+- [x] Update examples to match canonical terminology
+- [x] Align parameter descriptions with behavior
+- [x] Confirm package site configuration is still valid
 
 **Acceptance criteria**
 - Documentation matches the implementation
 
 ---
 
-### Task 8 — Add tests for Phase 1 behavior
+### Task 8 — Add tests for Phase 1 behavior ✅ Done
 **Owner:** Agent 4  
 **Files:**
 - tests/testthat/*.R
@@ -146,12 +146,12 @@ Tasks not yet started.
 - tests/testthat/helper*.R if needed
 
 **Checklist**
-- [ ] Add validation tests
-- [ ] Add constructor tests
-- [ ] Add label extraction tests
-- [ ] Add vocabulary tests
-- [ ] Add DTM tests
-- [ ] Add regression tests for terminology fixes
+- [x] Add validation tests
+- [x] Add constructor tests
+- [x] Add label extraction tests
+- [x] Add vocabulary tests
+- [x] Add DTM tests
+- [x] Add regression tests for terminology fixes
 
 **Acceptance criteria**
 - Core behavior is covered by tests

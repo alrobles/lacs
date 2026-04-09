@@ -2,7 +2,7 @@
 % Please edit documentation in R/print.abstracts.R
 \name{print.abstracts}
 \alias{print.abstracts}
-\title{Title}
+\title{Print an abstracts object}
 \usage{
 \method{print}{abstracts}(x, ...)
 }
@@ -16,7 +16,7 @@ An object with a `print()` method that will print the input
   similarly to a tibble.
 }
 \description{
-Title
+Print an abstracts object
 }
 \examples{
 print(get_abstracts(lacsSample))

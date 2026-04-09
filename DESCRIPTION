@@ -5,13 +5,15 @@ Version: 0.1.0
 Authors@R: 
     person("Angel Luis", "Robles Fernandez", , "a.l.robles.fernandez@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4674-4270"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Provides a workflow for classifying scientific literature abstracts
+    using positive-unlabeled (PU) learning. Supports abstract ingestion, text
+    preprocessing, vocabulary construction, document-term matrix creation, and
+    model fitting via the PLUS algorithm.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
 RoxygenNote: 7.3.2
 Suggests:
     testthat (>= 3.0.0)
