@@ -50,16 +50,17 @@ Tasks not yet started.
 
 ---
 
-### Task 3 — Clean up object construction
+### Task 3 — Clean up object construction ✅ Done
 **Owner:** Agent 1  
 **Files:**
 - R/new_abstracts.R
+- tests/testthat/test-new-abstracts.R
 
 **Checklist**
-- [ ] Verify returned object structure
-- [ ] Ensure class assignment is correct
-- [ ] Check for any unnecessary assumptions
-- [ ] Keep constructor simple and stable
+- [x] Verify returned object structure
+- [x] Ensure class assignment is correct
+- [x] Check for any unnecessary assumptions
+- [x] Keep constructor simple and stable
 
 **Acceptance criteria**
 - new_abstracts() returns a valid abstracts object every time
