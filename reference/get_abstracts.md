@@ -12,8 +12,8 @@ get_abstracts(x = NULL)
 
 - x:
 
-  A data frame with abstracts. Should contain doi, title, abstracts and
-  a class column. The class should be possitive or unknown.
+  A data frame with abstracts. Should contain doi, title, abstract and a
+  class column. The class should be `"positive"` or `"unknown"`.
 
 ## Value
 

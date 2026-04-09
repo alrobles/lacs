@@ -13,7 +13,7 @@ get_y(abstracts)
 - abstracts:
 
   An object of class abstracts is a data frame with a class column.
-  Shoiuld have possitive and unknown classes
+  Should have `"positive"` and `"unknown"` classes
 
 ## Value
 
